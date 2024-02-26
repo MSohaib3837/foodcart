@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food Chart</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="main-div">
@@ -60,10 +66,58 @@
         </button>
       </div>
       <div class="menu-items-div" id="menu"></div>
+
+      <!-- Popup Div is here -->
+      <!-- Modal -->
+
+      <div
+        class="modal fade"
+        id="itemModal"
+        tabindex="-1"
+        aria-labelledby="itemModalLabel"
+        aria-hidden="true"
+      >
+        <div class="col-md-4 modalSize">
+          <div class="modal-dialog text-center">
+            <div class="modal-content">
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-12">
+                    <img src="" class="modal-item-image" alt="" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-">
+                    <h3 class="modal-item-name"></h3>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5">
+                    <p class="modal-item-description"></p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-5">
+                    <p class="modal-item-price"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
       const foodData = {
         Salads: [
+          {
+            name: "Karhai",
+            image: "img/buratta-salad.jpg",
+            description:
+              "Marinated cherry tomatoes,fresh burrata,fresh basil,tomato sauce, Parmesan tulle served with a slice of sourdough bread",
+            price: "AED 200.00",
+          },
           {
             name: "Burrata Salad",
             image: "img/buratta-salad.jpg",
@@ -831,12 +885,11 @@
           button.addEventListener("click", function () {
             scrollMenuContainer(button);
             // Remove 'active' class from all buttons
-              buttons.forEach(btn => {
-                  btn.classList.remove('active');
-              });
-              // Add 'active' class to the clicked button
-              button.classList.add('active');
-
+            buttons.forEach((btn) => {
+              btn.classList.remove("active");
+            });
+            // Add 'active' class to the clicked button
+            button.classList.add("active");
           });
         });
         document.addEventListener("DOMContentLoaded", function () {
@@ -849,7 +902,7 @@
                 .getAttribute("href")
                 .substring(1);
               const targetSection = document.getElementById(targetId);
-              console.log(targetId,"I am section", targetSection);
+              console.log(targetId, "I am section", targetSection);
               targetSection.scrollIntoView({ behavior: "smooth" });
             });
           });
@@ -862,7 +915,7 @@
               const button = document.querySelector(
                 `[data-category="${section.id}"]`
               );
-              
+
               // if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
               //   button.classList.add("active");
               // } else {
@@ -871,8 +924,6 @@
             });
           });
         });
-
-
       });
     </script>
 
@@ -894,18 +945,18 @@
             .substring(1);
           // console.log(targetId, "I am here3");
           const targetSection = document.getElementById(targetId);
-          console.log('Iam target', targetSection);
+
           // If the target section is in view
           if (
             targetSection.offsetTop <= scrollPosition &&
             targetSection.offsetTop + targetSection.offsetHeight >
               scrollPosition
           ) {
-            menuButtons.forEach(btn => {
-                btn.classList.remove('active');
-              });
-              // Add 'active' class to the clicked button
-              button.classList.add('active');
+            menuButtons.forEach((btn) => {
+              btn.classList.remove("active");
+            });
+            // Add 'active' class to the clicked button
+            button.classList.add("active");
             button.scrollIntoView({
               behavior: "smooth",
               block: "nearest",
@@ -918,5 +969,67 @@
       // Add scroll event listener
       window.addEventListener("scroll", handleScroll);
     </script>
+    <!-- Mdoel Script is start from here  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all item containers
+        const itemContainers = document.querySelectorAll(".item-container");
+
+        // Add click event listener to each item container
+        itemContainers.forEach((itemContainer) => {
+          itemContainer.addEventListener("click", () => {
+            console.log("I am Clicked");
+            // Get item details
+            const itemName = itemContainer.querySelector(
+              ".details-container-itemName"
+            ).textContent;
+            const itemDescription = itemContainer.querySelector(
+              ".details-container-itemDescription"
+            ).textContent;
+            const itemPrice = itemContainer.querySelector(
+              ".details-container-itemPrice"
+            ).textContent;
+            const itemImage = itemContainer.querySelector(
+              ".details-container-item-img"
+            ).src;
+
+            // Populate modal with item details
+            const modalItemImage = document.querySelector(".modal-item-image");
+            const modalItemName = document.querySelector(".modal-item-name");
+            const modalItemDescription = document.querySelector(
+              ".modal-item-description"
+            );
+            const modalItemPrice = document.querySelector(".modal-item-price");
+
+            if (
+              modalItemImage &&
+              modalItemName &&
+              modalItemDescription &&
+              modalItemPrice
+            ) {
+              modalItemImage.src = itemImage;
+              modalItemImage.alt = itemName;
+              modalItemName.textContent = itemName;
+              modalItemDescription.textContent = itemDescription;
+              modalItemPrice.textContent = itemPrice;
+
+              // Show the modal
+              $("#itemModal").modal("show");
+            } else {
+              console.error(
+                "One or more modal item elements not found in the DOM"
+              );
+            }
+          });
+        });
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>

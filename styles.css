@@ -8,7 +8,7 @@ body {
 }
 
 .main-div {
-    width: 460px;
+    width: 410px;
     margin: auto;
     background-color: white;
 }
@@ -47,7 +47,7 @@ img {
     justify-content: center;
     background-color: #a85521;
     border-radius: 100px;
-    
+    border: none;
 }
 
 .login-button-text {
@@ -342,4 +342,16 @@ img {
     text-align: center;
     overflow: hidden;
 
+}
+
+
+/* Modal Classes */
+
+/* .add-item-to-basket-window{
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+} */
+.modalSize{
+    margin: 0 auto;
 }

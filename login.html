@@ -31,19 +31,23 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 7px 14px;
             transition: background-color .2s ease-out,box-shadow .2s ease-out;
             gap: 7px;
             
         }
         .back-btn-img {
-            width: 35px;
-            min-width: 35px;
+            width: 40px;
+            min-width: 40px;
             height: 35px;
             min-height: 35px;
             color: #a85521;
             background: transparent;
-            border-color: #a85521;
+            border: none;
+            
+        }
+        .navigate-div {
+            display: flex;
+            gap: 7px;
         }
     </style>
 </head>
@@ -51,7 +55,9 @@
     <div class="login-page">
         <div class="login-container">
             <div class="back-page-button">
-                <img class="back-btn-img" src="img/back-button.png" alt="back-button" href="index.html" style="color: #a85521;"/>
+                    <button class="back-btn-img">
+                        <img src="img/back-button.svg" alt="Back Button"/>
+                    </button>
             </div>
             <form action="login_process.html" method="post">
                 <div class="form-group">
