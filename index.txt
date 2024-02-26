@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Chart</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main-div">
+      <!-- Profile-cover-picture-login-Divs -->
+      <div class="">
+        <div class="cover-photo-div">
+          <img src="img/cover_Photo.jpeg" />
+        </div>
+        <div class="empty-div" style="height: 0px"></div>
+        <div class="profile-img-row-div">
+          <div class="profile-img-div">
+            <img src="img/profilePhoto.jpg" />
+          </div>
+          <div class="login-button-div">
+            <button class="login-button">
+              <span class="login-button-text"> Log in </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Profile-info-Divs -->
+      <div class="profile-name-div">
+        <h2 class="profile-name-heading">The Host</h2>
+        <span class="profile-description">Table 4</span>
+      </div>
+      <!-- list of buttons -->
+      <div class="menu-buttons-div">
+        <button class="menu-button" data-category="Salads">
+          <a href="#Salads" class="button-text"> Salads </a>
+        </button>
+        <button class="menu-button" data-category="Sandwiches">
+          <a href="#Sandwiches" class="button-text"> Sandwiches </a>
+        </button>
+        <button class="menu-button" data-category="Mains">
+          <a href="#Mains" class="button-text"> Mains </a>
+        </button>
+        <button class="menu-button" data-category="Sides">
+          <a href="#Sides" class="button-text"> Sides </a>
+        </button>
+        <button class="menu-button" data-category="Desserts">
+          <a href="#Desserts" class="button-text"> Desserts </a>
+        </button>
+        <button class="menu-button" data-category="specialtyCoffee">
+          <a href="#specialtyCoffee" class="button-text"> Specialty Coffee </a>
+        </button>
+        <button class="menu-button" data-category="Beverages">
+          <a href="#Beverages" class="button-text"> Beverages </a>
+        </button>
+        <button class="menu-button" data-category="chocolateBoxes">
+          <a href="#chocolateBoxes" class="button-text"> Chocolate Boxes </a>
+        </button>
+      </div>
+      <div class="menu-items-div" id="menu"></div>
+    </div>
+    <script>
+      const foodData = {
+        Salads: [
+          {
+            name: "Burrata Salad",
+            image: "img/buratta-salad.jpg",
+            description:
+              "Marinated cherry tomatoes,fresh burrata,fresh basil,tomato sauce, Parmesan tulle served with a slice of sourdough bread",
+            price: "AED 51.00",
+          },
+          {
+            name: "Chicken & Artichoke Salad",
+            image: "img/chicken-artichoke-salad.jpg",
+            description:
+              "Slow Roasted Chicken, Grilled Artichokes, Rice crisps, Pickled Thai Chili, Yoghurt Dressing",
+            price: "AED 51.00",
+          },
+          {
+            name: "Raw Papaya & Avocado Salad",
+            image: "img/raw-papaya-avocado-salad.jpg",
+            description:
+              "Raw Papaya, Spiced Onion, Coconut, Avocado, Mint & Coriander Dressing*Allergen: Sesame",
+            price: "AED 48.00",
+          },
+          {
+            name: "Spicy Potato and corn salad",
+            image: "img/spicy-potato-and-corn-salad.jpg",
+            description:
+              "Sweet corn, caramelized radish, Thai red chilly, beef bacon spring onions served with chilly pesto",
+            price: "AED 48.00",
+          },
+        ],
+        Sandwiches: [
+          {
+            name: "Anti- Pasto, Beef Salami",
+            image: "img/anti-pasto-beef-salami.jpg",
+            description:
+              "Basil pesto, roasted peppers, rocket, beef salami, fresh mozzarella*Allergen: Dairy, Gluten, Nuts",
+            price: "AED 69.00",
+          },
+          {
+            name: "Chicken Milanese Sandwich",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Breaded n fried chicken fillet and green apple slaw sandwiched in Multigrain Sourdough Loaf",
+            price: "AED 55.00",
+          },
+          {
+            name: "Slow Roasted Chicken, Pecans & Artichoke",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Mustard Mayonnaise, Celery, Pecans, Rocket Leaves*Allergen: Dairy, Gluten, Nuts",
+            price: "AED 48.00",
+          },
+          {
+            name: "Quattro Formaggi",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Sundried tomato pesto, rocket, brie, mozzarella, parmesan, montery jack* Allergen: Dairy, Gluten",
+            price: "AED 48.00",
+          },
+          {
+            name: "Tuna Melt",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Sliced tomato, Mustard Mayo, Montre-Jack, Rucola, Jalapenos*Allergen: Dairy, Gluten.",
+            price: "AED 48.00",
+          },
+        ],
+        Mains: [
+          {
+            name: "The Host Beef Sliders",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Premium beef patty, caramelised onion , japanese mayo ,dijon mustard , spiced fries",
+            price: "AED 65.00",
+          },
+          {
+            name: "Truffle Rigatoni",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Homemade Rigatoni pasta simmered in Truffle cream, Truffle oil and parmesan.",
+            price: "AED 80.00",
+          },
+          {
+            name: "Rigatoni Arrabbiata",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Homemade rigatoni , arrabiata sauce, parmagiana, medium spicy.",
+            price: "AED 65.00",
+          },
+          {
+            name: "Chicken Tacos",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Corn tortillas, chicken tenders, shredded red cabbage slaw, pickled onion, robanjan mayo, medium spicy",
+            price: "AED 48.00",
+          },
+          {
+            name: "Chicken Slider",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Crispy chicken dunked in homemade hot sauce sandwiched with coleslaw in potato buns, medium spicy.",
+            price: "AED 44.00",
+          },
+        ],
+        Sides: [
+          {
+            name: "Black Pepper Fries",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Mixed with pepper",
+            price: "AED 20.00",
+          },
+          {
+            name: "Chili Spice Fries",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Mixed with Host spiced blend",
+            price: "AED 20.00",
+          },
+          {
+            name: "Classic Fries",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Salted french fries",
+            price: "AED 20.00",
+          },
+        ],
+        Desserts: [
+          {
+            name: "The Host Chocolate Crepe",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "French style pancake made from flour, sugar, egg, milk and brown butter stuffed with milk chocolate Garnish- drizzle of milk chocolate and roasted crushed hazelnut on top",
+            price: "AED 38.00",
+          },
+          {
+            name: "Chocolate Fudge",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "4 Layer Nutella chocolate fudge cake  served with chocolate melt and feuilletine",
+            price: "AED 38.00",
+          },
+          {
+            name: "Blueberry & Lemon Crumble Cake",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "A new York style crumb cake with fresh blueberries, lemon zest and topped with buttery crumb",
+            price: "AED 22.00",
+          },
+          {
+            name: "Banana Bread",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Banana cake made from mashed bananas mixed with eggs, flour, brown sugar, baking powder, topping with caramelized pecan",
+            price: "AED 18.00",
+          },
+          {
+            name: "Hazelnut Crunch Chocolate Cake",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Entremet of flourless hazelnut cake, salted caramel, chocolate mousse glazed with Milk chocolate and Hazelnut crunch.",
+            price: "AED 49.00",
+          },
+          {
+            name: "Citrus Cake",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "eggs, flour, butter, sugar, flavor of lemon and orange",
+            price: "AED 18.00",
+          },
+          {
+            name: "Saint Sebastian",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Spanish crustless baked cheese cake",
+            price: "AED 46.00",
+          },
+          {
+            name: "Panna Cotta",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Vanilla panna cotta with raspberry coulis",
+            price: "AED 45.00",
+          },
+          {
+            name: "Date Cake Pudding",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Sticky date pudding with rich caramel sauce topped with vanilla ice cream",
+            price: "AED 44.00",
+          },
+          {
+            name: "Tiramisu",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Ladyfingers dipped in coffee, layered with a smooth cream mixture (Deconstructive)",
+            price: "AED 42.00",
+          },
+          {
+            name: "Crème Brûlée",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Classic creamy custard, crunchy caramel on top",
+            price: "AED 42.00",
+          },
+          {
+            name: "Umm Ali Skillet",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Classic Middle Eastern bread pudding with roasted nuts, sweetened milk & whipped cream",
+            price: "AED 40.00",
+          },
+          {
+            name: "Creme Caramel",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Caramel custard is a custard dessert with a layer of clear caramel sauce.",
+            price: "AED 41.00",
+          },
+          {
+            name: "Strawberry Cheese Cake",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Handmade cheese cake, fresh strawberry, raspberry coulis",
+            price: "AED 38.00",
+          },
+          {
+            name: "Soft Baked Double Chocolate Cookies",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Stuffed with Crunchy Peanuts Butter, Topped with Vanilla Ice Cream",
+            price: "AED 38.00",
+          },
+          {
+            name: "Soft Serve",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Indulge yourself with our home-made soft serve",
+            price: "AED 21.00",
+          },
+          {
+            name: "Croissant",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Plain / cheese / zaatar /pain au chocolate",
+            price: "AED 15.00",
+          },
+          {
+            name: "Double chocolate cookies",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Milk and Dark chocolate, topped with sea salt",
+            price: "AED 15.00",
+          },
+        ],
+        specialtyCoffee: [
+          {
+            name: "V60 Hot",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "100% Ethiopian medium roast arabica",
+            price: "AED 36.00",
+          },
+          {
+            name: "Iced V60",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "100% Ethiopian medium roast arabica",
+            price: "AED 36.00",
+          },
+          {
+            name: "Cold Brew",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "100% Ethiopian medium roast arabica",
+            price: "AED 34.00",
+          },
+          {
+            name: "Cold Drip Tower",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "100% Ethiopian medium roast arabica",
+            price: "AED 32.00",
+          },
+          {
+            name: "Cold Drip Tower",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "100% Ethiopian medium roast arabica",
+            price: "AED 32.00",
+          },
+          {
+            name: "Turkish Hazelnut",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Turkish hazelnut boiled with full cream milk",
+            price: "AED 32.00",
+          },
+          {
+            name: "Spanish Latte Hot",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, top with fresh hot milk mixed with sweetened condensed milk",
+            price: "AED 30.00",
+          },
+          {
+            name: "Iced Spanish Latte",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, top with fresh cold milk mixed with sweetened condensed milk",
+            price: "AED 30.00",
+          },
+          {
+            name: "Classic Turkish Coffee",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Classic turkish coffee",
+            price: "AED 28.00",
+          },
+          {
+            name: "Latte Hot",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, top with fresh hot milk",
+            price: "AED 27.00",
+          },
+          {
+            name: "Iced latte",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, top with fresh cold milk",
+            price: "AED 27.00",
+          },
+          {
+            name: "Cappuccino Hot",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, top with fresh frothed milk",
+            price: "AED 27.00",
+          },
+          {
+            name: "Iced Cappuccino",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, top with fresh cold milk",
+            price: "AED 27.00",
+          },
+          {
+            name: "Flat White",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, top with fresh hot milk",
+            price: "AED 27.00",
+          },
+          {
+            name: "Espresso with Lemon Slice",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, with sliced of lemon",
+            price: "AED 26.00",
+          },
+          {
+            name: "Piccolo",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, top with fresh hot milk",
+            price: "AED 26.00",
+          },
+          {
+            name: "Cortado",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast arabica, top with fresh hot milk",
+            price: "AED 26.00",
+          },
+          {
+            name: "Americano Hot",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "100% Brazilian medium roast arabica",
+            price: "AED 23.00",
+          },
+          {
+            name: "Americano Cold",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "100% Brazilian medium roast arabica",
+            price: "AED 23.00",
+          },
+          {
+            name: "Macchiato",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "100% Brazilian medium roast Espresso with scoop of frothed hot milk",
+            price: "AED 21.00",
+          },
+          {
+            name: "Espresso",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "100% medium roast arabica ",
+            price: "AED 20.00",
+          },
+        ],
+        Beverages: [
+          {
+            name: "Arabic Coffee",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Emarati finest roast",
+            price: "AED 38.00",
+          },
+          {
+            name: "Still Water small",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Natural Mineral water 500ml",
+            price: "AED 19.00",
+          },
+          {
+            name: "Sparkling Water small",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Sparkling mineral water 500ml",
+            price: "AED 19.00",
+          },
+          {
+            name: "Moroccan Tea",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Green tea prepared with fresh mint with drops of orange blossom",
+            price: "AED 38.00",
+          },
+          {
+            name: "Tropical Breeze",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Fresh orange juice mixed with lyche & Raspberry",
+            price: "AED 34.00",
+          },
+          {
+            name: "Matcha Latte Hot",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: " ",
+            price: "AED 30.00",
+          },
+          {
+            name: "Matcha Latte Cold",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: " ",
+            price: "AED 30.00",
+          },
+          {
+            name: "Hot Chocolate",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Slow boiled dark and milk chocolate with milk optional cream and top with shredded chocolate",
+            price: "AED 30.00",
+          },
+          {
+            name: "Summer Cooler",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Fresh orange juice mixed with lyche ",
+            price: "AED 30.00",
+          },
+          {
+            name: "The Host Lemonade",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Fresh ginger, lemongrass, lemon",
+            price: "AED 30.00",
+          },
+          {
+            name: "Orange Fresh Juice",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Fresh squeeze orange ",
+            price: "AED 26.00",
+          },
+          {
+            name: "Karkade",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Cold brew hibiscus",
+            price: "AED 26.00",
+          },
+          {
+            name: "Classic Lemonade",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Fresh lemon juice Mixed with water ",
+            price: "AED 26.00",
+          },
+          {
+            name: "Coca Cola",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Carbonated soft drinks 290ml",
+            price: "AED 20.00",
+          },
+          {
+            name: "Coke Zero",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Carbonated soft drinks 290ml",
+            price: "AED 20.00",
+          },
+          {
+            name: "Sprite",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Carbonated soft drinks 290ml",
+            price: "AED 20.00",
+          },
+          {
+            name: "White Coffee",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "Hot water with orange blossom top with honey ",
+            price: "AED 19.00",
+          },
+          {
+            name: "Tea Selection",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description:
+              "Newby is the world’s most awarded luxury tea brand. Newby was founded in London at the turn of the millennium with a clear mission - to reintroduce quality tea and revive the world’s love for it.",
+            price: "AED 19.00",
+          },
+          {
+            name: "Karak Chai",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "The Host finest karak tea",
+            price: "AED 16.00",
+          },
+          {
+            name: "Karak Chai ( with Saffron )",
+            image: "img/chicken-milanese-sandwich.jpg",
+            description: "The Host finest karak tea",
+            price: "AED 16.00",
+          },
+        ],
+        chocolateBoxes: [
+          {
+            name: "Chocolate Wafer Roll Bag",
+            image: "img/buratta-salad.jpg",
+            description:
+              "Crunchy milk chocolate wafer roll with nutella filling",
+            price: "AED 20.00",
+          },
+          {
+            name: "Chocolate Wafer Rolls Box",
+            image: "img/buratta-salad.jpg",
+            description:
+              "24 pieces of assorted nutella stuffed wafer rolls dipped in Belgian chocolate, with pistachio,almond,hazelnut and sea salt coating.",
+            price: "AED 95.00",
+          },
+          {
+            name: "Assortment Duo Acrylic Box of Chocolate",
+            image: "img/buratta-salad.jpg",
+            description: "Made with Pure Cocoa Butter",
+            price: "AED 850.00",
+          },
+          {
+            name: "Assortment Acrylic Box of Chocolate",
+            image: "img/buratta-salad.jpg",
+            description: "Made with Pure Cocoa Butter",
+            price: "AED 590.00",
+          },
+          {
+            name: "Assortment Acrylic Box of Chocolate",
+            image: "img/buratta-salad.jpg",
+            description: "Made with Pure Cocoa Butter",
+            price: "AED 320.00",
+          },
+          {
+            name: "Assortment Box of Chocolate 72 pieces",
+            image: "img/buratta-salad.jpg",
+            description: "Made with pure Cocoa Butter",
+            price: "AED 578.00",
+          },
+          {
+            name: "Assortment Box of Chocolate 36 pieces",
+            image: "img/buratta-salad.jpg",
+            description: "Made with pure Cocoa Butter",
+            price: "AED 289.00",
+          },
+          {
+            name: "Assortment of chocolate 25 pcs box",
+            image: "img/buratta-salad.jpg",
+            description: "Made with pure Cocoa Butter",
+            price: "AED 210.00",
+          },
+          {
+            name: "Assortment of chocolate 16 pcs box",
+            image: "img/buratta-salad.jpg",
+            description:
+              "Crunchy milk chocolate wafer roll with nutella filling",
+            price: "AED 126.00",
+          },
+          {
+            name: "Caramel Hazelnut Crunch ( Dark )",
+            image: "img/buratta-salad.jpg",
+            description:
+              "63% dark chocolate with hazelnut feuilletine filling,roasted hazelnut and salted caramel",
+            price: "AED 8.00",
+          },
+          {
+            name: "Caramel Hazelnut Crunch ( Milk )",
+            image: "img/buratta-salad.jpg",
+            description:
+              "Milk chocolate with hazelnut feuilletine filling,roasted hazelnut and salted caramel",
+            price: "AED 8.00",
+          },
+          {
+            name: "Hazelnut",
+            image: "img/buratta-salad.jpg",
+            description: "Milk chocolate with roasted hazelnut",
+            price: "AED 8.00",
+          },
+          {
+            name: "Earl Grey",
+            image: "img/buratta-salad.jpg",
+            description: "Milk chocolate with black tea and bergamot",
+            price: "AED 8.00",
+          },
+          {
+            name: "Rose",
+            image: "img/buratta-salad.jpg",
+            description: "Milk chocolate with rose ganache",
+            price: "AED 8.00",
+          },
+          {
+            name: "Peanut Butter",
+            image: "img/buratta-salad.jpg",
+            description: "Milk chocolate with peanut butter crunch",
+            price: "AED 8.00",
+          },
+          {
+            name: "Mistika",
+            image: "img/buratta-salad.jpg",
+            description: "Milk chocolate with mystique ganache",
+            price: "AED 8.00",
+          },
+          {
+            name: "Orange",
+            image: "img/buratta-salad.jpg",
+            description: "Dark chocolate with orange cream and milk ganache",
+            price: "Out of stock",
+          },
+          {
+            name: "Pistachio Crunch",
+            image: "img/buratta-salad.jpg",
+            description:
+              "Milk chocolate with pistachio cream, crunch feuilletine and roasted pistachio",
+            price: "AED 8.00",
+          },
+          {
+            name: "Coffee",
+            image: "img/buratta-salad.jpg",
+            description: "Milk chocolate with Arabian peninsula coffee",
+            price: "AED 8.00",
+          },
+        ],
+      };
+
+      const menuContainer = document.getElementById("menu");
+
+      // Loop through each category in foodData
+      for (const category in foodData) {
+        if (foodData.hasOwnProperty(category)) {
+          const categoryItems = foodData[category];
+
+          // creating a div for each category
+          const foodType = document.createElement("div");
+          foodType.classList.add("food-type");
+          foodType.setAttribute("id", category); // Add your desired ID here
+          menuContainer.appendChild(foodType);
+          // Create a heading for the category
+          const categoryHeading = document.createElement("h2");
+          categoryHeading.textContent = category;
+          categoryHeading.classList.add("item-type-name");
+          foodType.appendChild(categoryHeading);
+
+          // Loop through each item in the category
+          categoryItems.forEach((item) => {
+            // Create a container for the item
+            const itemContainer = document.createElement("div");
+            itemContainer.classList.add("item-container");
+
+            // Create a div for item details
+            const detailsDiv = document.createElement("div");
+            detailsDiv.classList.add("details-container");
+            // Create a heading for the item name
+            const itemName = document.createElement("h3");
+            itemName.textContent = item.name;
+            itemName.classList.add("details-container-itemName");
+            detailsDiv.appendChild(itemName);
+
+            // Create a span for the item description
+            const itemDescription = document.createElement("span");
+            itemDescription.textContent = item.description;
+            itemDescription.classList.add("details-container-itemDescription");
+            detailsDiv.appendChild(itemDescription);
+
+            // Create a span for the item price
+            const itemPrice = document.createElement("span");
+            itemPrice.textContent = item.price;
+            itemPrice.classList.add("details-container-itemPrice");
+            detailsDiv.appendChild(itemPrice);
+
+            // Append the details div to the item container
+            itemContainer.appendChild(detailsDiv);
+
+            // Create a div for the item image
+            const imageDiv = document.createElement("div");
+            imageDiv.classList.add("details-container-item-img-div");
+            // Create an image element
+            const image = document.createElement("img");
+            image.src = item.image;
+            image.classList.add("details-container-item-img");
+            imageDiv.appendChild(image);
+
+            // Create a div to contain both plus and minus icons
+            const iconContainer = document.createElement("div");
+            iconContainer.classList.add("icon-container");
+
+            // Create an Button element for the plus icon
+            const iconAddButton = document.createElement("button");
+            iconAddButton.classList.add("icon-add-button");
+            // Create an image element for the plus icon
+            const plusIcon = document.createElement("img");
+            plusIcon.src = "img/plus.png"; // Update the source to your plus icon PNG
+            plusIcon.alt = "+"; // Optional: Provide alt text for accessibility
+            plusIcon.classList.add("plus-icon");
+
+            // Create an Button element for the plus icon
+            const iconSubButton = document.createElement("button");
+            iconSubButton.classList.add("icon-minus-button");
+            // create a span element for items count
+            const itemNumber = document.createElement("span");
+            itemNumber.classList.add("item-count-span");
+            // Create an image element for the minus icon
+            const minusIcon = document.createElement("img");
+            minusIcon.src = "img/minus-sign.png"; // Update the source to your minus icon PNG
+            minusIcon.alt = "-"; // Optional: Provide alt text for accessibility
+            minusIcon.classList.add("minus-icon");
+
+            // Add click event listener to the plus button
+            plusIcon.addEventListener("click", () => {
+              // Toggle visibility of the minus icon when plus icon is clicked
+              minusIcon.style.display = "inline-block";
+            });
+
+            // Hide the minus icon by default
+            iconSubButton.style.display = "none";
+
+            // Append plus and minus icons to the icon container
+            iconAddButton.appendChild(plusIcon);
+            iconSubButton.appendChild(minusIcon);
+            iconContainer.appendChild(iconSubButton);
+            iconContainer.appendChild(iconAddButton);
+            // Append the icon container to the image div
+            imageDiv.appendChild(iconContainer);
+
+            // Append the image div to the item container
+            itemContainer.appendChild(imageDiv);
+
+            // Append the item container to the food type div
+            foodType.appendChild(itemContainer);
+          });
+        }
+      }
+      // Add event listeners to each menu button
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuButtonsDiv = document.querySelector(".menu-buttons-div");
+        const buttons = menuButtonsDiv.querySelectorAll(".menu-button");
+
+        // Function to handle scrolling of the menu container
+        function scrollMenuContainer(button) {
+          // Calculate the distance from the clicked button to the right edge of the menu container
+          const distanceToRight =
+            menuButtonsDiv.offsetWidth -
+            (button.offsetLeft + button.offsetWidth);
+
+          // If the button is closer to the right edge, scroll to the right
+          if (distanceToRight < 100) {
+            // Adjust this threshold as needed
+            menuButtonsDiv.scrollLeft += 80; // Adjust the scroll amount as needed
+          } else {
+            // Adjust this threshold as needed
+            menuButtonsDiv.scrollLeft -= 80; // Adjust the scroll amount as needed
+          }
+        }
+
+        buttons.forEach((button) => {
+          // Add click event listener to each button
+          button.addEventListener("click", function () {
+            scrollMenuContainer(button);
+            // Remove 'active' class from all buttons
+              buttons.forEach(btn => {
+                  btn.classList.remove('active');
+              });
+              // Add 'active' class to the clicked button
+              button.classList.add('active');
+            // Remove 'selected' class from all buttons
+            // buttons.forEach(btn => {
+            //     btn.classList.remove('selected');
+            // });
+
+            // // Add 'selected' class to the clicked button
+            // button.classList.add('selected');
+
+            // // Get the data-category attribute value of the clicked button
+            // const category = button.getAttribute('data-category');
+            // console.log("I am the category",category);
+            // // Find all category headings
+            // const categoryHeadings = document.querySelectorAll('h2.item-type-name');
+            // console.log("I am the categoryHeadings",categoryHeadings);
+            // // Iterate through the headings to find the matching one
+            // categoryHeadings.forEach(heading => {
+            //     if (heading.textContent.trim() === category) {
+            //         // Scroll to the category heading
+            //         console.log("I am the categoryHeadings")
+            //         heading.scrollIntoView({ behavior: 'smooth' });
+            //     }
+            // });
+          });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+          const buttons = document.querySelectorAll(".menu-button");
+
+          buttons.forEach((button) => {
+            button.addEventListener("click", function (event) {
+              event.preventDefault(); // Prevent default anchor behavior
+              const targetId = this.querySelector("a")
+                .getAttribute("href")
+                .substring(1);
+              const targetSection = document.getElementById(targetId);
+              console.log(targetId,"I am section", targetSection);
+              targetSection.scrollIntoView({ behavior: "smooth" });
+            });
+          });
+
+          document.addEventListener("scroll", function () {
+            const sections = document.querySelectorAll(".section");
+
+            sections.forEach((section) => {
+              const rect = section.getBoundingClientRect();
+              const button = document.querySelector(
+                `[data-category="${section.id}"]`
+              );
+              
+              // if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+              //   button.classList.add("active");
+              // } else {
+              //   button.classList.remove("active");
+              // }
+            });
+          });
+        });
+
+        // buttons.forEach((button) => {
+        //     // Add click event listener to each button
+        //     button.addEventListener("click", function () {
+        //         scrollMenuContainer(button);
+
+        //         // Remove 'selected' class from all buttons
+        //         buttons.forEach(btn => {
+        //             btn.classList.remove('selected');
+        //         });
+
+        //         // Add 'selected' class to the clicked button
+        //         button.classList.add('selected');
+
+        //         // Get the data-category attribute value of the clicked button
+        //         const category = button.getAttribute('data-category');
+        //         console.log("I am the category",category);
+        //         // Find all category headings
+        //         const categoryHeadings = document.querySelectorAll('h2.item-type-name');
+        //         console.log("I am the categoryHeadings",categoryHeadings);
+        //         // Iterate through the headings to find the matching one
+        //         categoryHeadings.forEach(heading => {
+        //             if (heading.textContent.trim() === category) {
+        //                 // Scroll to the category heading
+        //                 console.log("I am the categoryHeadings")
+        //                 heading.scrollIntoView({ behavior: 'smooth' });
+        //             }
+        //         });
+        //     });
+        // });
+
+        // // Add scroll event listener to the window
+        // window.addEventListener('scroll', () => {
+        // Get the position of the scroll
+        //     const scrollPosition = window.scrollY;
+
+        //     // Find the sections corresponding to each category
+        //     const sections = document.querySelectorAll('.food-type');
+        //     let currentCategory = null;
+
+        //     sections.forEach(section => {
+        //         const sectionTop = section.offsetTop - 200; // Adjusted for better scrolling selection
+        //         const sectionBottom = sectionTop + section.offsetHeight;
+
+        //         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        //             // Get the category of the current section
+        //             const categoryHeading = section.querySelector('.item-type-name');
+        //             currentCategory = categoryHeading.textContent.trim();
+        //         }
+        //     });
+
+        //     // Find the corresponding button and add a class to it to indicate it's selected
+        //     buttons.forEach(button => {
+        //         if (button.getAttribute('data-category') === currentCategory) {
+        //             button.classList.add('selected');
+        //             scrollMenuContainer(button); // Scroll the menu container to show the selected button
+        //         } else {
+        //             button.classList.remove('selected');
+        //         }
+        //     });
+        // });
+      });
+    </script>
+
+    <script>
+      // Get all the menu buttons
+      const menuButtons = document.querySelectorAll(".menu-button");
+
+      // Function to handle scroll event
+      function handleScroll() {
+        // Get the current scroll position
+        const scrollPosition = window.scrollY;
+        // Loop through each menu button
+        menuButtons.forEach((button) => {
+          // Get the target section ID from the button's href attribute
+          // console.log("button class", button.classList, button)
+          const targetId = button
+            .querySelector("a")
+            .getAttribute("href")
+            .substring(1);
+          // console.log(targetId, "I am here3");
+          const targetSection = document.getElementById(targetId);
+          console.log('Iam target', targetSection);
+          // If the target section is in view
+          if (
+            targetSection.offsetTop <= scrollPosition &&
+            targetSection.offsetTop + targetSection.offsetHeight >
+              scrollPosition
+          ) {
+            menuButtons.forEach(btn => {
+                btn.classList.remove('active');
+              });
+              // Add 'active' class to the clicked button
+              button.classList.add('active');
+            button.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+              inline: "center",
+            });
+          }
+        });
+      }
+
+      // Add scroll event listener
+      window.addEventListener("scroll", handleScroll);
+    </script>
+  </body>
+</html>

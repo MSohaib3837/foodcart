@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+body {
+    background-color: #F2F2F2;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+}
+
+.main-div {
+    width: 460px;
+    margin: auto;
+    background-color: white;
+}
+
+.profile-img-row-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -35px;
+    padding: 7px 14px;
+}
+
+.profile-img-div {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-button-div {
+    display: flex;
+    column-gap: 7px;
+}
+
+.login-button {
+    display: inline-flex;
+    min-height: 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: #a85521;
+    border-radius: 100px;
+    
+}
+
+.login-button-text {
+    padding: 7px 14px;
+    font-size: 12px;
+    white-space: nowrap;
+    color: inherit!important;
+    font-weight: 600;
+    margin: 0;
+    line-height: 150%;
+    font-family: "Inter", sans-serif;;
+}
+
+.button-login-anchor{
+    text-decoration: none;
+    color: white;
+
+}
+
+.profile-name-div {
+    
+    padding: 0px 14px;
+    background-color: white;
+}
+
+.profile-name-heading {
+    margin-top: 0px;
+    font-size: 31px;
+    letter-spacing: -.31px;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    color: #333333;
+}
+
+.profile-description {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    color: #333333;
+    font-weight: 600;
+    margin: 0;
+    line-height: 150%;
+}
+
+/* .menu-buttons-div {
+    display: flex;
+    width: 100%;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    margin-bottom: -14px;
+    gap: 5px;
+    padding-bottom: 18px;
+}
+ */
+
+.menu-buttons-div  {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: -14px;
+    gap: 5px;
+    padding-bottom: 18px;
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    background-color: white; /* Optional: to ensure it's visible on scroll */
+    z-index: 100; /* Ensure it's above other content */
+}
+
+.menu-button {
+    padding: 0px;
+    flex: 0 0 auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    white-space: nowrap;
+    align-items: center;
+    margin-left: 4px;
+    cursor: pointer;
+    color: #333333;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 21px;
+    border: none;
+    box-shadow: 0px 1px 2px 1px rgba(51, 51, 51, .07), 0px 0px 1px 0px rgba(51, 51, 51, .21), 0px 2px 2px -4px rgba(51, 51, 51, .07);
+    border-radius: 7px;
+    background: #ffffff;
+    transition: all .2s ease-out;
+    overflow: hidden;
+
+}
+
+.menu-button:hover {
+    background-color: #F2F2F2; /* Background color when hovered over */
+}
+
+
+
+.menu-button.active {
+    background-color: #F2F2F2; /* Background color when hovered over */
+}
+
+.menu-button.selected {
+    background-color: #F2F2F2; /* Background color for the selected button */
+}
+
+
+.navigate-to-login-page{
+    text-decoration: none;
+}
+.button-text {
+    padding: 3px 7px;
+    text-decoration: none;
+    color: #333333;
+}
+
+.menu-items-div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 7px 0;
+}
+
+.item-type-name {
+    font-size: 31px;
+    line-height: 135.48%;
+    letter-spacing: -.31px;
+    color: #333333;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 14px 21px;
+    border-bottom: solid 1px #f2f2f2;
+}
+
+.item-container {
+    list-style: none;
+    margin: 0;
+    padding: 21px;;
+    gap: 14px;
+    display: flex;
+    align-content: stretch;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1 0 0;
+}
+
+.details-container-itemName {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 155%;
+    font-family: "Inter", sans-serif;
+}
+
+.details-container-itemDescription {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    font-family: "Inter", sans-serif;
+}
+
+.details-container-itemPrice{
+    font-weight: 600;
+    color: #333333;
+    display: flex;
+    gap: 7px;
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.details-container-item-img-div{
+    width: 126px;
+    position: relative;
+    align-self: self-start;
+}
+
+.details-container-item-img{
+    display: block;
+    max-width: 100%;
+    width: 126px;
+    max-height: 126px;
+    aspect-ratio: 1/1;
+    border: 1px solid #F2F2F2;
+    border-radius: 7px;
+}
+
+.icon-container{
+    position: absolute;
+    right: -7px;
+    bottom: -7px;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+
+}
+
+.icon-add-button{
+    position: relative;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    background: #a85521;
+    background-color: #a85521;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    min-height: 30px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all .2s ease;
+    padding: 0;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    
+}
+
+.icon-minus-button{
+    position: relative;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    background: #a85521;
+    background-color: #a85521;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    min-height: 30px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all .2s ease;
+    padding: 0;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    
+}
+
+.plus-icon{
+    width: 21px;
+    min-width: 21px;
+    height: 21px;
+    min-height: 21px;
+    color: white;
+    filter: invert(100%) ;
+}
+
+.minus-icon {
+    width: 21px;
+    min-width: 21px;
+    height: 21px;
+    min-height: 21px;
+    color: white;
+    filter: invert(100%) ;
+}
+
+.item-count-span{
+    display: inline-table;
+    width: 70px;
+    padding: 0 38px 0 3px;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden;
+
+}
