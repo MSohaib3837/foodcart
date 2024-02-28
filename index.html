@@ -11,104 +11,220 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
-  <body>
-    <div class="main-div">
-      <!-- Profile-cover-picture-login-Divs -->
-      <div class="">
-        <div class="cover-photo-div">
-          <img src="img/cover_Photo.jpeg" />
-        </div>
-        <div class="empty-div" style="height: 0px"></div>
-        <div class="profile-img-row-div">
-          <div class="profile-img-div">
-            <img src="img/profilePhoto.jpg" />
-          </div>
-          <div class="login-button-div">
-            <button class="login-button">
-              <a href="login.html" class="button-login-anchor">
-                <span class="login-button-text"> Log in </span>
-              </a>
-            </button>
-          </div>
-        </div>
-      </div>
-      <!-- Profile-info-Divs -->
-      <div class="profile-name-div">
-        <h2 class="profile-name-heading">The Host</h2>
-        <span class="profile-description">Table 4</span>
-      </div>
-      <!-- list of buttons -->
-      <div class="menu-buttons-div">
-        <button class="menu-button" data-category="Salads">
-          <a href="#Salads" class="button-text"> Salads </a>
-        </button>
-        <button class="menu-button" data-category="Sandwiches">
-          <a href="#Sandwiches" class="button-text"> Sandwiches </a>
-        </button>
-        <button class="menu-button" data-category="Mains">
-          <a href="#Mains" class="button-text"> Mains </a>
-        </button>
-        <button class="menu-button" data-category="Sides">
-          <a href="#Sides" class="button-text"> Sides </a>
-        </button>
-        <button class="menu-button" data-category="Desserts">
-          <a href="#Desserts" class="button-text"> Desserts </a>
-        </button>
-        <button class="menu-button" data-category="specialtyCoffee">
-          <a href="#specialtyCoffee" class="button-text"> Specialty Coffee </a>
-        </button>
-        <button class="menu-button" data-category="Beverages">
-          <a href="#Beverages" class="button-text"> Beverages </a>
-        </button>
-        <button class="menu-button" data-category="chocolateBoxes">
-          <a href="#chocolateBoxes" class="button-text"> Chocolate Boxes </a>
-        </button>
-      </div>
-      <div class="menu-items-div" id="menu"></div>
-
-      <!-- Popup Div is here -->
-      <!-- Modal -->
-
-      <div
-        class="modal fade"
-        id="itemModal"
-        tabindex="-1"
-        aria-labelledby="itemModalLabel"
-        aria-hidden="true"
-      >
-        <div class="col-md-4 modalSize">
-          <div class="modal-dialog text-center">
-            <div class="modal-content">
-              <!-- Modal Body -->
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-md-12">
-                    <img src="" class="modal-item-image" alt="" />
-                  </div>
+  <body style="overflow-x: hidden; background-color: #f2f2f2">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="main-div">
+            <!-- Profile-cover-picture-login-Divs -->
+            <div class="">
+              <div class="cover-photo-div">
+                <img src="img/cover_Photo.jpeg" />
+              </div>
+              <div class="empty-div" style="height: 0px"></div>
+              <div class="profile-img-row-div">
+                <div class="profile-img-div">
+                  <img src="img/profilePhoto.jpg" />
                 </div>
-                <div class="row">
-                  <div class="col-md-">
-                    <h3 class="modal-item-name"></h3>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-5">
-                    <p class="modal-item-description"></p>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-5">
-                    <p class="modal-item-price"></p>
-                  </div>
+                <div class="login-button-div">
+                  <button class="login-button">
+                    <a href="login.html" class="button-login-anchor">
+                      <span class="login-button-text"> Log in </span>
+                    </a>
+                  </button>
                 </div>
               </div>
             </div>
+            <!-- Profile-info-Divs -->
+            <div class="profile-name-div">
+              <h2 class="profile-name-heading">The Host</h2>
+              <span class="profile-description">Table 4</span>
+            </div>
+            <!-- list of buttons -->
+            <div class="menu-buttons-div">
+              <button class="menu-button" data-category="Salads">
+                <a href="#Salads" class="button-text"> Salads </a>
+              </button>
+              <button class="menu-button" data-category="Sandwiches">
+                <a href="#Sandwiches" class="button-text"> Sandwiches </a>
+              </button>
+              <button class="menu-button" data-category="Mains">
+                <a href="#Mains" class="button-text"> Mains </a>
+              </button>
+              <button class="menu-button" data-category="Sides">
+                <a href="#Sides" class="button-text"> Sides </a>
+              </button>
+              <button class="menu-button" data-category="Desserts">
+                <a href="#Desserts" class="button-text"> Desserts </a>
+              </button>
+              <button class="menu-button" data-category="specialtyCoffee">
+                <a href="#specialtyCoffee" class="button-text">
+                  Specialty Coffee
+                </a>
+              </button>
+              <button class="menu-button" data-category="Beverages">
+                <a href="#Beverages" class="button-text"> Beverages </a>
+              </button>
+              <button class="menu-button" data-category="chocolateBoxes">
+                <a href="#chocolateBoxes" class="button-text">
+                  Chocolate Boxes
+                </a>
+              </button>
+            </div>
+            <div class="menu-items-div" id="menu"></div>
           </div>
         </div>
       </div>
+      
+      
+      
+        <div class="col-md-4 container1" id="footer" style="display: none;">
+          <div class="justify-content-center">
+            <div class="">
+                <!-- Modal Body -->
+                <div class="modal-body justify-content-center p-0">
+                  <div class="row">
+                    <div class="">
+                      <img
+                        src=""
+                        class="modal-item-image rounded-top"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="p-3">
+                    <div class="row">
+                      <div class="">
+                        <h3 class="modal-item-name text-start py-2"></h3>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="">
+                        <p class="modal-item-description text-start"></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="">
+                        <h4 class="modal-item-price text-start"></h4>
+                      </div>
+                    </div>
+                    <div class="text-field-div py-2">
+                      <div
+                        class="text-field-label d-flex flex-row align-items-center py-3"
+                      >
+                        <i
+                          class="fa-regular fa-comment fa-flip-horizontal"
+                        ></i>
+                        <span class="text-field-heading ps-2">
+                          Special requirements
+                        </span>
+                      </div>
+                      <div class="text-field-area">
+                        <textarea
+                          class="form-control"
+                          placeholder="Let us know if you have special requirements..."
+                          id="floatingTextarea"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-md-12 buttons-area d-flex flex-row py-1 bg-white">
+                      <div class="col-md-4 modal-icon-container-div">
+                        <div class="modal-count-number-div">
+                          <div class="add-count-div">
+                            <i
+                              class="fa-solid fa-circle-minus minusBtn subtractbuttonofModal"
+                              style="
+                                color: rgb(168, 85, 33);
+                                display: inline-block;
+                                font-size: 30px;
+                              "
+                            ></i>
+                          </div>
+                          <div class="count-number-div">
+                            <strong>
+                              <span
+                                class="item-number-span mb-1"
+                                style="
+                                  display: inline-block;
+                                  font-size: 20px;
+                                  padding: 5px;
+                                "
+                                >1</span
+                              >
+                            </strong>
+                          </div>
+                          <div class="subtract-count-div">
+                            <i
+                              class="fa-solid fa-circle-plus plusBtn addbuttonofModal"
+                              style="color: rgb(168, 85, 33); font-size: 30px"
+                            >
+                            </i>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6 div-add-to-basket">
+                        <button
+                          class="btn btn-primary basket-btn"
+                          type="submit"
+                          style="
+                            background-color: #a85521;
+                            border: none;
+                            display: flex;
+                            width: 100%;
+                            align-items: center;
+                            justify-content: space-between;
+                            
+                          "
+                        >
+                          <span
+                            style="
+                              width: 100%;
+                              padding: 0 5px;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                              white-space: nowrap;
+                            "
+                          >
+                            Add to Basket
+                          </span>
+                          <span
+                            style="
+                              font-size: 11px;
+                              line-height: 21px;
+                              border-left: 1px solid hsla(0, 0%, 100%, 0.1);
+                              padding: 0 14px;
+                              letter-spacing: 0.01em;
+                            "
+                          >
+                            AED&nbsp;51.00
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          
+            
+        </div>
+      
     </div>
+    
     <script>
+      // Initial variable to hold the count
+
+      let itemNumber;
+      let minusIcon;
+
       const foodData = {
         Salads: [
           {
@@ -772,12 +888,15 @@
           // Loop through each item in the category
           categoryItems.forEach((item) => {
             // Create a container for the item
+            let count = 0;
+
             const itemContainer = document.createElement("div");
             itemContainer.classList.add("item-container");
 
             // Create a div for item details
             const detailsDiv = document.createElement("div");
             detailsDiv.classList.add("details-container");
+
             // Create a heading for the item name
             const itemName = document.createElement("h3");
             itemName.textContent = item.name;
@@ -812,41 +931,58 @@
             const iconContainer = document.createElement("div");
             iconContainer.classList.add("icon-container");
 
-            // Create an Button element for the plus icon
-            const iconAddButton = document.createElement("button");
-            iconAddButton.classList.add("icon-add-button");
             // Create an image element for the plus icon
-            const plusIcon = document.createElement("img");
-            plusIcon.src = "img/plus.png"; // Update the source to your plus icon PNG
-            plusIcon.alt = "+"; // Optional: Provide alt text for accessibility
-            plusIcon.classList.add("plus-icon");
-
-            // Create an Button element for the plus icon
-            const iconSubButton = document.createElement("button");
-            iconSubButton.classList.add("icon-minus-button");
-            // create a span element for items count
-            const itemNumber = document.createElement("span");
-            itemNumber.classList.add("item-count-span");
-            // Create an image element for the minus icon
-            const minusIcon = document.createElement("img");
-            minusIcon.src = "img/minus-sign.png"; // Update the source to your minus icon PNG
-            minusIcon.alt = "-"; // Optional: Provide alt text for accessibility
-            minusIcon.classList.add("minus-icon");
+            // Create the <i> element
+            const plusIcon = document.createElement("i");
+            // Set the class and style attributes
+            plusIcon.classList.add(
+              "fa-solid",
+              "fa-circle-plus",
+              "plusBtn",
+              "stopProp"
+            );
+            plusIcon.style.color = "#a85521";
 
             // Add click event listener to the plus button
             plusIcon.addEventListener("click", () => {
+              minusIcon = iconContainer.querySelector(".minusBtn");
+              itemNumber = iconContainer.querySelector(".item-count-span");
+              // If itemNumber span doesn't exist, create it
+              if (!itemNumber) {
+                itemNumber = document.createElement("span");
+                itemNumber.classList.add("item-count-span");
+                // Append itemNumber to the icon container
+                iconContainer.appendChild(itemNumber);
+              }
               // Toggle visibility of the minus icon when plus icon is clicked
               minusIcon.style.display = "inline-block";
+              count++;
+              updateCount(count);
             });
+            // create a span element for items count
+            itemNumber = document.createElement("span");
+            itemNumber.classList.add("item-count-span");
+            itemNumber.textContent = count; // Initialize itemNumber with the current count value
+
+            // Create an image element for the minus icon
+            minusIcon = document.createElement("i");
+            minusIcon.classList.add(
+              "fa-solid",
+              "fa-circle-minus",
+              "minusBtn",
+              "stopProp"
+            );
+            minusIcon.style.color = "#a85521";
 
             // Hide the minus icon by default
-            iconSubButton.style.display = "none";
+            minusIcon.style.display = "none";
+            itemNumber.style.display = "none";
 
             // Append plus and minus icons to the icon container
-            iconAddButton.appendChild(plusIcon);
-            iconSubButton.appendChild(minusIcon);
-            iconContainer.appendChild(iconSubButton);
-            iconContainer.appendChild(iconAddButton);
+            iconContainer.appendChild(minusIcon);
+            iconContainer.appendChild(itemNumber); // Append itemNumber span after plusIcon
+            iconContainer.appendChild(plusIcon);
+
             // Append the icon container to the image div
             imageDiv.appendChild(iconContainer);
 
@@ -855,9 +991,35 @@
 
             // Append the item container to the food type div
             foodType.appendChild(itemContainer);
+
+            // Add click event listener to the minus button
+            minusIcon.addEventListener("click", () => {
+              // Decrement count if it's greater than 0
+              if (count > 0) {
+                count--;
+                // Update count and display
+                updateCount(count);
+              }
+            });
           });
         }
       }
+
+      // Function to update count and display
+      function updateCount(count) {
+        // Update itemNumber span text with the current count
+        itemNumber.textContent = count;
+
+        // Hide itemNumber and minusIcon if count is 0, otherwise show them
+        if (count === 0) {
+          itemNumber.style.display = "none";
+          minusIcon.style.display = "none";
+        } else {
+          itemNumber.style.display = "inline-block";
+          minusIcon.style.display = "inline-block";
+        }
+      }
+
       // Add event listeners to each menu button
       document.addEventListener("DOMContentLoaded", function () {
         const menuButtonsDiv = document.querySelector(".menu-buttons-div");
@@ -902,7 +1064,7 @@
                 .getAttribute("href")
                 .substring(1);
               const targetSection = document.getElementById(targetId);
-              console.log(targetId, "I am section", targetSection);
+              // console.log(targetId, "I am section", targetSection);
               targetSection.scrollIntoView({ behavior: "smooth" });
             });
           });
@@ -927,6 +1089,18 @@
       });
     </script>
 
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let stopPropElements = document.getElementsByClassName("stopProp");
+
+        for (let i = 0; i < stopPropElements.length; i++) {
+          stopPropElements[i].addEventListener("click", function (event) {
+            event.stopPropagation();
+          });
+        }
+      });
+    </script> -->
+<!-- 
     <script>
       // Get all the menu buttons
       const menuButtons = document.querySelectorAll(".menu-button");
@@ -968,62 +1142,94 @@
 
       // Add scroll event listener
       window.addEventListener("scroll", handleScroll);
-    </script>
+    </script> -->
     <!-- Mdoel Script is start from here  -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Get all item containers
-        const itemContainers = document.querySelectorAll(".item-container");
+    // Get all item containers
+    const itemContainers = document.querySelectorAll(".item-container");
 
-        // Add click event listener to each item container
-        itemContainers.forEach((itemContainer) => {
-          itemContainer.addEventListener("click", () => {
-            console.log("I am Clicked");
+    // Get the modal container
+    const modalContainer = document.querySelector(".container1");
+    // Add click event listener to each item container
+    itemContainers.forEach((itemContainer) => {
+        itemContainer.addEventListener("click", () => {
             // Get item details
-            const itemName = itemContainer.querySelector(
-              ".details-container-itemName"
-            ).textContent;
-            const itemDescription = itemContainer.querySelector(
-              ".details-container-itemDescription"
-            ).textContent;
-            const itemPrice = itemContainer.querySelector(
-              ".details-container-itemPrice"
-            ).textContent;
-            const itemImage = itemContainer.querySelector(
-              ".details-container-item-img"
-            ).src;
+            const itemName = itemContainer.querySelector(".details-container-itemName").textContent;
+            const itemDescription = itemContainer.querySelector(".details-container-itemDescription").textContent;
+            const itemPrice = itemContainer.querySelector(".details-container-itemPrice").textContent;
+            const itemImage = itemContainer.querySelector(".details-container-item-img").src;
 
             // Populate modal with item details
             const modalItemImage = document.querySelector(".modal-item-image");
             const modalItemName = document.querySelector(".modal-item-name");
-            const modalItemDescription = document.querySelector(
-              ".modal-item-description"
-            );
+            const modalItemDescription = document.querySelector(".modal-item-description");
             const modalItemPrice = document.querySelector(".modal-item-price");
 
-            if (
-              modalItemImage &&
-              modalItemName &&
-              modalItemDescription &&
-              modalItemPrice
-            ) {
-              modalItemImage.src = itemImage;
-              modalItemImage.alt = itemName;
-              modalItemName.textContent = itemName;
-              modalItemDescription.textContent = itemDescription;
-              modalItemPrice.textContent = itemPrice;
+            if (modalItemImage && modalItemName && modalItemDescription && modalItemPrice) {
+                modalItemImage.src = itemImage;
+                modalItemImage.alt = itemName;
+                modalItemName.textContent = itemName;
+                modalItemDescription.textContent = itemDescription;
+                modalItemPrice.textContent = itemPrice;
 
-              // Show the modal
-              $("#itemModal").modal("show");
+              // Display the modal
+          modalContainer.style.display = "block";
+          modalContainer.classList.add("container1-displayed");
             } else {
-              console.error(
-                "One or more modal item elements not found in the DOM"
-              );
+                console.error("One or more modal item elements not found in the DOM");
             }
-          });
+        });
+    });
+});
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const profileImgRowDiv = document.querySelector(".profile-img-row-div");
+
+        window.addEventListener("scroll", function () {
+          const scrollPosition = window.scrollY;
+          const profileImgRowDivRect = profileImgRowDiv.getBoundingClientRect();
+
+          if (scrollPosition > profileImgRowDivRect.bottom) {
+            profileImgRowDiv.classList.add("sticky-top");
+          } else {
+            profileImgRowDiv.classList.remove("sticky-top");
+          }
         });
       });
     </script>
+
+    <!-- <script>
+      let countModalNumber = 1;
+      const modalSpan = document.getElementsByClassName("item-number-span")[0];
+      const modalAddbutton =
+        document.getElementsByClassName("addbuttonofModal")[0];
+      const modalSubtractButton = document.getElementsByClassName(
+        "subtractbuttonofModal"
+      )[0];
+
+      modalAddbutton.addEventListener("click", () => {
+        // console.log("I am modal counter +++++");
+        countModalNumber++;
+        modalSpan.textContent = countModalNumber;
+        // console.log("I am modal counter +++++", countModalNumber);
+      });
+
+      modalSubtractButton.addEventListener("click", () => {
+        // console.log("I am modal counter ----------");
+        if (countModalNumber > 1) {
+          countModalNumber--;
+          modalSpan.textContent = countModalNumber;
+          // console.log("I am modal counter -------", countModalNumber);
+        }
+      });
+
+      modalSpan.textContent = countModalNumber;
+    </script> -->
+
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
